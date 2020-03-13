@@ -1,35 +1,36 @@
-/* Definir fuentes personalizadas */
+﻿/* Define custom fonts */
+
 @font-face
 {
     font-family: 'BallparkWeiner';
-    src: url('polices/ballpark.eot');
-    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
-         url('polices/ballpark.woff') format('woff'),
-         url('polices/ballpark.ttf') format('truetype'),
-         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    src: url('fonts/ballpark.eot');
+    src: url('fonts/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ballpark.woff') format('woff'),
+         url('fonts/ballpark.ttf') format('truetype'),
+         url('fonts/ballpark.svg#BallparkWeiner') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 
 @font-face
 {
     font-family: 'Dayrom';
-    src: url('polices/dayrom.eot');
-    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
-         url('polices/dayrom.woff') format('woff'),
-         url('polices/dayrom.ttf') format('truetype'),
-         url('polices/dayrom.svg#Dayrom') format('svg');
+    src: url('fonts/dayrom.eot');
+    src: url('fonts/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dayrom.woff') format('woff'),
+         url('fonts/dayrom.ttf') format('truetype'),
+         url('fonts/dayrom.svg#Dayrom') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-/* Elementos principales de la página */
+
+/* Main elements of the page */
 
 body
 {
-    background-color:#F99C04;
+    background: url('images/yellow_background.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    color: #000000;
+    color: #181818;
 }
 
 #main_wrapper
@@ -44,7 +45,8 @@ section h1, footer h1, nav a
     font-weight: normal;
     text-transform: uppercase;
 }
-/* Encabezado */
+
+/* Header */
 
 header
 {
@@ -76,11 +78,11 @@ header h2
     margin-top: 0px;
     font-weight: normal;
 }
-/* Navegación */
+
+/* Navigation */
 
 nav
 {
-	background-image: 
     display: inline-block;
     width: 740px;
     text-align: right;
@@ -100,16 +102,17 @@ nav li
 nav a
 {
     font-size: 1.3em;
-    color: #EA2E05;
+    color: #181818;
     padding-bottom: 3px;
     text-decoration: none;
 }
 
 nav a:hover
 {
-    color: #EA2E05;
-    border-bottom: 3px solid #EA2E05;
+    color: #760001;
+    border-bottom: 3px solid #760001;
 }
+
 /* Banner */
 
 #banner_image
@@ -117,7 +120,7 @@ nav a:hover
     margin-top: 15px;
     height: 200px;
     border-radius: 5px;
-    background-image: url("images/sanfrancisco.jpg") no-repeat; 
+    background: url('images/sanfrancisco.jpg') no-repeat;
     position: relative;
     box-shadow: 0px 4px 4px #1c1a19;
     margin-bottom: 25px;
@@ -132,10 +135,11 @@ nav a:hover
     height: 33px;
     padding-top: 15px;
     padding-left: 4px;
-    background-color: rgb(24,24,24); /* Los navegadores antiguos leerán esto */
-    background-color: rgba(24,24,24,0.8); /* Los navegadores nuevos leerán esto */
+    background-color: rgb(24,24,24); /* Old browsers will read this */
+    background-color: rgba(24,24,24,0.8); /* New browsers will read this */
     color: white;
     font-size: 0.8em;
+    
 }
 
 .red_button
@@ -146,7 +150,7 @@ nav a:hover
     right: 5px;
     bottom: 5px;
     background: url('images/red_background.png') repeat-x;
-    border: 1px solid #EA2E05;
+    border: 1px solid #760001;
     border-radius: 5px;
     font-size: 1.2em;
     text-align: center;
@@ -159,7 +163,8 @@ nav a:hover
 {
     border: 0;
 }
-/* Cuerpo */
+
+/* Body */
 
 article, aside
 {
@@ -189,7 +194,7 @@ aside
 {
     position: relative;
     width: 235px;
-    background-color: #EA2E05;
+    background-color: #706b64;
     box-shadow: 0px 2px 5px #1c1a19;
     border-radius: 5px;
     padding: 10px;
@@ -218,7 +223,8 @@ aside img
 {
     margin-right: 5px;
 }
-/* Pie de página */
+
+/* Footer */
 
 footer
 {
@@ -278,3 +284,28 @@ footer h1
     text-decoration: none;
     color: #760001;
 }
+
+
+/* Applied to older versions of Internet Explorer */
+
+/* To activate inline-block positioning */
+
+.old_ie #main_title, .old_ie #logo, .old_ie header h1, .old_ie nav, .old_ie nav li, .old_ie .red_button, .old_ie article, .old_ie aside, .old_ie #tweet, .old_ie #my_pictures, .old_ie #my_friends, .old_ie #my_friends ul
+{
+    display: inline;
+    zoom: 1;
+}
+
+/* Some other tweaks */
+
+.old_ie section h1, .ie8 section h1
+{
+    font-size: 1.1em;
+}
+
+.old_ie footer div, .ie8 footer div
+{
+    margin-top: 30px;
+    background: url('images/line.png') repeat-x top;
+}
+
